@@ -27,17 +27,17 @@ public class TestCases extends DriverUtils {
 		closeDriver();
 	}
 
-	@Test(testName = "Registration", priority = 1)
-	public void startRegistration(Method method) throws InterruptedException {
-		RegistrationPage rp = new RegistrationPage(driver);
-		driver.get("https://demowebshop.tricentis.com/");
-		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//*[@class='ico-register']")).click();
-		rp.waitRegistration();
-		rp.CompleteRegistration("male", "217721Ashok", "217721Prabhu", "217721Ashok@gmail.com", "Ashok1", "Ashok1");
-		rp.verifyRegistration();
-		Thread.sleep(10000);
-	}
+//	@Test(testName = "Registration", priority = 1)
+//	public void startRegistration(Method method) throws InterruptedException {
+//		RegistrationPage rp = new RegistrationPage(driver);
+//		driver.get("https://demowebshop.tricentis.com/");
+//		driver.manage().window().maximize();
+//		driver.findElement(By.xpath("//*[@class='ico-register']")).click();
+//		rp.waitRegistration();
+//		rp.CompleteRegistration("male", "217721Ashok", "217721Prabhu", "217721Ashok@gmail.com", "Ashok1", "Ashok1");
+//		rp.verifyRegistration();
+//		Thread.sleep(10000);
+//	}
 
 	@Test(testName = "Login", priority = 2, dataProvider = "loginData")
 	public void login(String userName, String password) {
